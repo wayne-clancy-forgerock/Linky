@@ -19,6 +19,16 @@
 
   "permissions": [
     "activeTab",
+    "bookmarks",
     "https://api.myjson.com/*"
-  ]
+  ],
+
+  "externally_connectable": {
+    "matches": ["http://10.0.75.1:8080/*"]
+  },
+
+  "background": {
+    "scripts": ["js/eventPage.js"],
+    "persistent": false
+  }
 }

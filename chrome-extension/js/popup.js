@@ -85,9 +85,10 @@ function addBookmark() {
   loadFromMyJson(function(data) {
     $("#addSpan").empty();
     $("#addSpan").addClass("fa fa-spinner fa-spin");
+    
     var nodeId;
     var selectedCollection = $('#tree').treeview('getSelected', nodeId)[0];
-    if (selectedCollection === null) {
+    if (typeof selectedCollection == 'undefined') {
       selectedCollection = getUnsortedCollection(data);
     }
 

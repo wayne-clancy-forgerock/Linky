@@ -164,6 +164,8 @@ function saveCollection() {
     selectedCollection.bookmarkIconSize = $("#bookmarkIconSizeSlider").val();
     selectedCollection.showBookmarksAsCards = $("#showBookmarksAsCardsCheckbox").is(':checked');  
 
+    sendMessage("SaveCollection", selectedCollection);
+
     updateTree();
 }
 
